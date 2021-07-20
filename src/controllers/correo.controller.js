@@ -3,9 +3,9 @@ import { pool } from '../database'
 async function sendEmail(dest, title, text){
     try {
         await transporter.sendMail({
-            from: 'DanielRY <catdoupeu@gmail.com>', // sender address
-            to: dest, // list of receivers
-            subject: title, // Subject line
+            from: 'André Huerto <catdoupeu@gmail.com>', 
+            to: dest, 
+            subject: title, 
             html: '<!DOCTYPE html>' +
                 '<html><head><title>Appointment</title>' +
                 '</head><body><div>' +
