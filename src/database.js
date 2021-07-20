@@ -6,4 +6,5 @@ export const pool=new Pool({
     database:'ddd3rr9s8dekj2',
     port:5432,
     ssl:{rejectUnauthorized:false}
+    
 });

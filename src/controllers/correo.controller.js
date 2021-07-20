@@ -23,8 +23,10 @@ export const registerEmail=async(req, res)=>{
         const response = await pool.query('select fc_register_email($1,$2,$3,$4)', [destinatario, titulo, mensaje, idusuario]);
         if(response){
            await sendEmail(destinatario,titulo,mensaje);
+           
         }
         return res.status(200).json(`Correo ${titulo} registrado correctamente`);
+
     } catch (e) {
         console.log(e);
         return res.status(500).json('Internal Server error...!')
